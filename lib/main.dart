@@ -14,7 +14,7 @@ class MainApp extends StatefulWidget {
 
 class _MainAppState extends State<MainApp> {
   String buttonName = "Click";
-
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -47,8 +47,16 @@ class _MainAppState extends State<MainApp> {
               label: "Settings",
             )
           ],
+          currentIndex: currentIndex,
+          onTap: onBottomBarTapped,
         ),
       ),
     );
+  }
+
+  void onBottomBarTapped(int index) {
+    setState(() {
+      currentIndex = index;
+    });
   }
 }
