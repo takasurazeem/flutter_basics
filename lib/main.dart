@@ -24,16 +24,33 @@ class _MainAppState extends State<MainApp> {
           title: const Text("Title"),
         ),
         body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              setState(() {
-                buttonName = "Clicked me.";
-              });
-              if (kDebugMode) {
-                print("Button clicked");
-              }
-            },
-            child: Text(buttonName),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    buttonName = "Clicked me.";
+                  });
+                  if (kDebugMode) {
+                    print("Button clicked");
+                  }
+                },
+                child: Text(buttonName),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    buttonName = "Clicked me.";
+                  });
+                  if (kDebugMode) {
+                    print("Button clicked");
+                  }
+                },
+                child: Text(buttonName),
+              ),
+            ],
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(
