@@ -28,10 +28,19 @@ class _MainAppState extends State<MainApp> {
             width: double.infinity,
             height: double.infinity,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(5.0),
+                      ),
+                    ),
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.teal.shade800,
+                  ),
                   onPressed: () {
                     setState(() {
                       buttonName = "Clicked me.";
@@ -43,6 +52,15 @@ class _MainAppState extends State<MainApp> {
                   child: Text(buttonName),
                 ),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(5.0),
+                      ),
+                    ),
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.deepPurple.shade300,
+                  ),
                   onPressed: () {
                     setState(() {
                       buttonName = "Clicked me.";
