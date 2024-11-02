@@ -15,6 +15,19 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Title"),
         ),
+        body: const Text("body"),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: "Settings",
+            )
+          ],
+        ),
       ),
     );
   }
