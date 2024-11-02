@@ -15,7 +15,9 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Title"),
         ),
-        body: const Text("body"),
+        body: const Center(
+          child: Text("body"),
+        ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(
